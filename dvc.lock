@@ -35,12 +35,12 @@ stages:
       md5: 3ed0f0b46481d277081f3aa752206b99
       size: 19500
     - path: train.py
-      md5: 5e7672809809b7b945ab82d55efb1eac
-      size: 840
+      md5: ce43ee3ed4853aee643ba6287bc2ef58
+      size: 841
     outs:
     - path: metrics.txt
-      md5: f69af7813e504a8f84348e2e4df031da
+      md5: 7778295411db7a4c764f1b48b08ac1cd
       size: 16
     - path: model.joblib
-      md5: 77c3c46cc5049f89308fc33bfbeb9a64
-      size: 325584
+      md5: 028957934b2cfc87715638aac26042ad
+      size: 834336
