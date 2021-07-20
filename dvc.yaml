@@ -1,0 +1,23 @@
+stages:
+  prepare:
+    cmd: python get_data.py
+    deps:
+    - get_data.py
+    outs:
+    - data/test_features.csv
+    - data/test_labels.csv
+    - data/train_features.csv
+    - data/train_labels.csv
+  train:
+    cmd: python train.py
+    deps:
+    - data/test_features.csv
+    - data/test_labels.csv
+    - data/train_features.csv
+    - data/train_labels.csv
+    - train.py
+    outs:
+    - model.joblib
+    metrics:
+    - metrics.txt:
+        cache: false

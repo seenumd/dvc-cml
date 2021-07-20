@@ -1,0 +1,46 @@
+schema: '2.0'
+stages:
+  prepare:
+    cmd: python get_data.py
+    deps:
+    - path: get_data.py
+      md5: 976a6a060f2508ac438765c0c4e7ebb8
+      size: 586
+    outs:
+    - path: data/test_features.csv
+      md5: 1c8a8aa0eeae24cba5300ee0723ca768
+      size: 127751
+    - path: data/test_labels.csv
+      md5: 04b0f79abf6c578f428ca472e5349ad9
+      size: 6500
+    - path: data/train_features.csv
+      md5: 99881159d1ae5c220193bf9cef69321e
+      size: 383206
+    - path: data/train_labels.csv
+      md5: 3ed0f0b46481d277081f3aa752206b99
+      size: 19500
+  train:
+    cmd: python train.py
+    deps:
+    - path: data/test_features.csv
+      md5: 1c8a8aa0eeae24cba5300ee0723ca768
+      size: 127751
+    - path: data/test_labels.csv
+      md5: 04b0f79abf6c578f428ca472e5349ad9
+      size: 6500
+    - path: data/train_features.csv
+      md5: 99881159d1ae5c220193bf9cef69321e
+      size: 383206
+    - path: data/train_labels.csv
+      md5: 3ed0f0b46481d277081f3aa752206b99
+      size: 19500
+    - path: train.py
+      md5: 74c75550692f3eeff08f843b8e8ae0eb
+      size: 840
+    outs:
+    - path: metrics.txt
+      md5: ea8339c6f5f47181b30cb53ad9008b43
+      size: 17
+    - path: model.joblib
+      md5: 0254e84bede5b7d1e201b7b4546c799a
+      size: 61344

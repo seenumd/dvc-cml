@@ -1,0 +1,4 @@
+[core]
+    remote = dvc_storage_1
+['remote "dvc_storage_1"']
+    url = C:/Users/Sreenivasulu.Mudalap/Documents/tmp/dvc_data/20072021
