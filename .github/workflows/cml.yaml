@@ -12,6 +12,6 @@ jobs:
               #pip install -r requirements.txt
               #dvc repro               
               cat metrics.txt > report.md
-              dvc metrics diff --show-md master >> report.md
+              #dvc metrics diff --show-md master >> report.md
               cml-publish confusion_matrix.png --md >> report.md
               cml-send-comment report.md
